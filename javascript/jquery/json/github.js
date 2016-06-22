@@ -6,4 +6,4 @@ function githubAPI(url) {
   }
     
   return output;
-});
+}
