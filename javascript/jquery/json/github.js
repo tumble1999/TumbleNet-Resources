@@ -1,6 +1,4 @@
-function githubAPI(location) {
+function githubAPI(location, callback) {
   var url = "https://api.github.com/" + location;
-  $.getJSON(url, function(data) {
-    return data;
-  });
+  jQuery.getJSON(url + "?callback=?", callback);
 }
