@@ -1,5 +1,5 @@
 jQuery.fn.loadReleases = function(username, repoName) {
-    this.html("<span>Querying GitHub for " + username + "/" + repoName +"'s releases...</span>");
+    this.html("<span>Querying GitHub for " + username + "/" + repoName + "'s releases...</span>");
      
     var target = this;
     var text = "";
