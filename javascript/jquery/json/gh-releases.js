@@ -6,7 +6,6 @@ jQuery.fn.loadRepositories = function(username, repoName) {
   //https://api.github.com/repos/#username#/#reponame#/releases
     githubAPI("repos/" + username + "/" + repoName + "/releases", function(data) {
         var releases = data.data; // JSON Parsing
-        sortByName(releases);
       //https://github.com/tumblegamer/TumbleCraft/releases/new
         text = text+"<a href='https://github.com/" + username + "/" + repoName + "/repositories/new'><button class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent' id='add'><i class='material-icons' role='presentation'>add</i><span class='visuallyhidden'>Add</span></button></a>";
         $(repos).each(function() {
@@ -20,10 +19,4 @@ jQuery.fn.loadRepositories = function(username, repoName) {
         });
         target.html(text);
     });
-      
-    function sortByName(repos) {
-        repos.sort(function(a,b) {
-        return a.name - b.name;
-       });
-    }
 };
