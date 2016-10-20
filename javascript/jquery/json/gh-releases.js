@@ -13,7 +13,7 @@ jQuery.fn.loadRepositories = function(username, repoName) {
             text = text + "<li>",
               this.name,
               this.tag_name
-          "<a href='" +  + "'>More
+          "<a href='" +  + "'>More",
               
               "</li>";
         });
