@@ -8,7 +8,7 @@ jQuery.fn.loadReleases = function(username, repoName) {
         alert(data.data.ToString());
         var releases = data.data; // JSON Parsing
       //https://github.com/tumblegamer/TumbleCraft/releases/new
-        text = text+"<a href='https://github.com/" + username + "/" + repoName + "/repositories/new'><button class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent' id='add'><i class='material-icons' role='presentation'>add</i><span class='visuallyhidden'>Add</span></button></a>";
+        text = text+"<a href='https://github.com/" + username + "/" + repoName + "/releases/new'><button class='mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent' id='add'><i class='material-icons' role='presentation'>add</i><span class='visuallyhidden'>Add</span></button></a>";
         $(releases).each(function() {
             text = text + "<li><a href='" + this.html_url + "'>" + this.name + "</a>" + this.tag_name + " -  DOWNLOAD: <a href='" + this.zipball_url + "'>Zip</a></li>";
         });
