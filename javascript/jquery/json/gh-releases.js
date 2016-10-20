@@ -1,4 +1,4 @@
-jQuery.fn.loadRepositories = function(username, repoName) {
+jQuery.fn.loadReleases = function(username, repoName) {
     this.html("<span>Querying GitHub for " + username + "/" + repoName +"'s releases...</span>");
      
     var target = this;
