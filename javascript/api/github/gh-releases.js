@@ -9,7 +9,7 @@ jQuery.fn.loadReleases = function(username, repoName) {
       //https://github.com/tumblegamer/TumbleCraft/releases/new
         
         $(releases).each(function() {
-            text = text + "<tr><td<a href='" + this.html_url + "'>" + this.name + "</a></td><td" + this.tag_name + "</td><td><a href='" + this.assets[0].browser_download_url + "'>Download</a>(" + this.assets[0].download_count + ")</td>";
+            text = text + "<tr><td><a href='" + this.html_url + "'>" + this.name + "</a></td><td>" + this.tag_name + "</td><td><a href='" + this.assets[0].browser_download_url + "'>Download</a>(" + this.assets[0].download_count + ")</td>";
         });
         text = "<a href='https://github.com/" + username + "/" + repoName + "/releases/new'>Add</button></a>" + "<table style='width:100%'><tr><th>Version Name</th><th>Version Number</th> <th> </th></tr>" + text + "</table>";
         target.html(text);
